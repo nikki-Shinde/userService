@@ -306,9 +306,9 @@ public class UserController {
 			}
 
 		} catch (DisabledException e) {
-			throw new Exception("User Disabled", e);
+			throw new DisabledException("User Disabled", e);
 		} catch (BadCredentialsException e) {
-			throw new Exception("Invalid Credentials", e);
+			throw new BadCredentialsException("Invalid Credentials", e);
 		} catch (NullPointerException e) {
 			return ResponseEntity.ok(Constants.USER_INVALID);
 		}
