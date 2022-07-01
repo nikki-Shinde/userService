@@ -306,7 +306,7 @@ public class UserController {
 			}
 
 		} catch (DisabledException e) {
-			throw new DisabledException("User Disabled", e);
+			throw new DisabledException("User Disabled",e);
 		} catch (BadCredentialsException e) {
 			throw new BadCredentialsException("Invalid Credentials", e);
 		} catch (NullPointerException e) {
